@@ -1,5 +1,6 @@
 import static org.junit.Assert.*;
 
+import java.util.Arrays;
 import java.util.Random;
 
 import org.junit.Before;
@@ -27,6 +28,18 @@ public class Generador {
 		
 		assertEquals(1, secuencia.length);
 		assertEquals(3, secuencia[0]);
+		
+	}
+	
+	@Test 
+	public void un_rango_de_n_elementos_devuelve_una_secuencia_de_n_elementos_en_cualquier_orden() {
+		int[] secuencia = generador.generarSecuenciaAleatoria(2, 14);
+		
+		assertEquals(13, secuencia.length);
+		Arrays.sort(secuencia);
+		assertEquals(2, secuencia[0]);
+		assertEquals(5, secuencia[3]);
+		assertEquals(14, secuencia[12]);
 		
 	}
 	
