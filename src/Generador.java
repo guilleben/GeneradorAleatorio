@@ -19,4 +19,11 @@ public class Generador {
 		
 	}
 
+	private int[] generarSecuenciaAleatoria(int inicio, int fin) {
+	 int numElementos = (inicio > fin ) ? 0 : fin - inicio + 1;
+	 
+	 int[] secuencia = new int[numElementos];
+		return secuencia;
+	}
+
 }
