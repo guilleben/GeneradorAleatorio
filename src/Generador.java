@@ -4,14 +4,19 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class Generador {
+	private Generador generador;
 
 	@Before
-	public void setUp() throws Exception {
+	public void setUp()  {
+		generador = new Generador();
 	}
 
 	@Test
-	public void test() {
-		fail("Not yet implemented");
+	public void un_rango_vacio_genera_una_secuancia_vacia() {
+		int[] secuencia = generador.generarSecuenciaAleatoria(3, 1);
+		
+		assertEquals(0, secuencia.length);
+		
 	}
 
 }
