@@ -18,6 +18,18 @@ public class Generador {
 		assertEquals(0, secuencia.length);
 		
 	}
+	
+	@Test
+	public void un_rango_de_un_elemento_genera_una_secuncia_con_ese_elemento() {
+		int[] secuencia = generador.generarSecuenciaAleatoria(3, 3);
+		
+		assertEquals(1, secuencia.length);
+		assertEquals(3, secuencia[0]);
+		
+	}
+	
+	
+	
 
 	private int[] generarSecuenciaAleatoria(int inicio, int fin) {
 	 int numElementos = (inicio > fin ) ? 0 : fin - inicio + 1;
