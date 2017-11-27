@@ -1,5 +1,7 @@
 import static org.junit.Assert.*;
 
+import java.util.Random;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -35,6 +37,12 @@ public class Generador {
 	 int numElementos = (inicio > fin ) ? 0 : fin - inicio + 1;
 	 
 	 int[] secuencia = new int[numElementos];
+	 Random rnd = new Random();
+	 for (int i = 0; i < numElementos; i++){
+		 int puntoDeInsercion = rnd.nextInt(i + 1);
+		 secuencia[i] = secuencia[puntoDeInsercion];
+		 secuencia[puntoDeInsercion] = inicio + i;
+	 }
 		return secuencia;
 	}
 
